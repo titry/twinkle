@@ -1,0 +1,14 @@
+#위치에따른지도가져오기
+
+G=ox.graph_from_address(address,network_type=network_type)
+
+#원하는지점과해당지도에대해서그래프
+
+gdf_nodes=ox.graph_to_gdfs(G,edges=False)#x,y=gdf_nodes["geometry"].unary_union.centroid.xy
+
+#지도중심점좌표#동아대학교의위경도좌표:lat->위도x,경도->lony
+
+x=128.96817249950897
+y=35.11755694483541
+center_node=ox.distance.nearest_nodes(G,x,y)
+G=ox.project_graph(G
