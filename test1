@@ -1,0 +1,4 @@
+asssert "hello" == "hai"
+assert 4==4
+assert True
+assert False
